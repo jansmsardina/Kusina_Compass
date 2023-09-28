@@ -9,23 +9,18 @@ class StoreController extends Controller
 {
     public function index()
     {
-        // Retrieve all store updates
         $storeUpdates = StoreUpdate::all();
-
-        return view('profile.edit', ['storeUpdates' => $storeUpdates]);
+        return view('details.update', compact('storeUpdates'));
     }
 
     public function edit($id)
     {
-        // Retrieve a specific store update by ID
         $storeUpdate = StoreUpdate::findOrFail($id);
-
-        return view('store.edit', ['storeUpdate' => $storeUpdate]);
+        return view('details.update', compact('storeUpdate'));
     }
 
     public function update(Request $request, $id)
     {
-        // Validate the request
         $request->validate([
             'contact' => 'required',
             'opening_time' => 'required',
@@ -33,11 +28,9 @@ class StoreController extends Controller
             'address' => 'required',
         ]);
 
-        // Update the store details
         $storeUpdate = StoreUpdate::findOrFail($id);
         $storeUpdate->update($request->all());
 
-        return redirect()->route('store.show')
-            ->with('success', 'Store details updated successfully');
+        return redirect()->route('details.update')->with('success', 'Store details updated successfully');
     }
 }

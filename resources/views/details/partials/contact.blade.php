@@ -5,22 +5,20 @@
         </h2>
 
         <p class="mt-1 text-sm text-gray-600">
-            {{ __("Make sure to input your active contact number") }}
+            {{ __("Make sure to input your active contact number(s)") }}
         </p>
     </header>
 
-    <form id="send-verification" method="post" action="{{ route('verification.send') }}">
-        @csrf
-    </form>
-
-    <form method="post" action="{{ route('hours.update') }}" class="mt-6 space-y-6">
+    <form method="post" action="{{ route('details.update') }}" class="mt-6 space-y-6">
         @csrf
         @method('patch')
 
+        <!-- Contact Number Input -->
         <div>
-            <x-input-label for="contact_number" :value="__('Opening Time')" />
-            <x-text-input id="contact_number" name="opening_time" type="int" class="mt-1 block w-full" :value="old('contact_number', $user->contact_number)" required autofocus />
-            <x-input-error class="mt-2" :messages="$errors->get('contact_number')" />
+            <x-input-label for="contact_numbers" :value="__('Contact Numbers')" />
+            <input id="contact_numbers" name="contact_numbers" type="text" class="mt-1 block w-full" :value="old('contact_numbers', implode('/', $user->contact_numbers))" required autocomplete="tel" />
+            <x-input-error class="mt-2" :messages="$errors->get('contact_numbers')" />
+            <p class="text-sm text-gray-600">Separate multiple numbers with forward slashes (/).</p>
         </div>
         
 

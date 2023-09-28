@@ -37,10 +37,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     //Store routes
-    Route::prefix('store')->group(function () {
-        Route::get('/', [StoreController::class, 'index'])->name('store.show');
-        Route::get('/edit', [StoreController::class, 'edit'])->name('store.edit');
-        Route::put('/update', [StoreController::class, 'update'])->name('store.update');
+    Route::prefix('details')->group(function () {
+        Route::get('/', [StoreController::class, 'index'])->name('details.show');
+        Route::get('/edit', [StoreController::class, 'edit'])->name('details.edit');
+        Route::put('/update', [StoreController::class, 'update'])->name('details.update');
     });
 
     //Product routes
