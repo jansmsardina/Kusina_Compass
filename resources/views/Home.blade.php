@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-sm-3 mb-3 mb-sm-0">
                         <div class="cards" style="width: 18rem;">
-                            <img src="{{ asset('Images/Coffee.jpeg') }}" class="card-img-top" alt="..." />
+                            <img src="{{ asset('public/storage/Images/coffee.jpeg') }}" class="card-img-top" alt="..." />
                             <div class="card-body">
                                 <h5 class="card-title">New Coffee Shop</h5>
                                 <p class="card-text">
@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-sm-3 mb-3 mb-sm-0">
                         <div class="cards" style="width: 18rem;">
-                            <img src="{{ asset('Images/BurgerShop.jpeg') }}" class="card-img-top" alt="..." />
+                            <img src="{{ asset('public/storage/Images/BurgerShop.jpeg') }}" class="card-img-top" alt="..." />
                             <div class="card-body">
                                 <h5 class="card-title">New Burger Shop</h5>
                                 <p class="card-text">
@@ -37,7 +37,7 @@
                     </div>
                     <div class="col-sm-3 mb-3 mb-sm-0">
                         <div class="cards" style="width: 18rem;">
-                        <img src="{{ asset('Images/PizzaShop.jpeg') }}" class="card-img-top" alt="..." />
+                        <img src="{{ asset('public/storage/Images/PizzaShop.jpeg') }}" class="card-img-top" alt="..." />
                             <div class="card-body">
                                 <h5 class="card-title">New Pizza Shop</h5>
                                 <p class="card-text">
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-sm-3 mb-3 mb-sm-0">
                         <div class="cards" style="width: 18rem;">
-                        <img src="{{ asset('Images/Jenkins.jpeg') }}" class="card-img-top" alt="..." />
+                        <img src="{{ asset('public/storage/Images/Jenkins.jpeg') }}" class="card-img-top" alt="..." />
                             <div class="card-body">
                                 <h5 class="card-title">New Cake Shop</h5>
                                 <p class="card-text">
@@ -81,7 +81,7 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{ asset('Images/plate-removebg-preview.png') }}"
+                                <img src="{{ asset('public/storage/Images/plate-removebg-preview.png') }}"
                                     class="d-block w-100" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>First slide label</h5>
@@ -89,7 +89,7 @@
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('Images/plate-removebg-preview.png') }}"
+                                <img src="{{ asset('public/storage/Images/plate-removebg-preview.png') }}"
                                     class="d-block w-100" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Second slide label</h5>
@@ -97,7 +97,7 @@
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('Images/plate-removebg-preview.png') }}"
+                                <img src="{{ asset('public/storage/Images/plate-removebg-preview.png') }}"
                                     class="d-block w-100" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Third slide label</h5>
@@ -131,6 +131,10 @@
     </div>
 </div>
 
+
+<div>
+    
+                            </div>
 
 
 
