@@ -1,0 +1,484 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+nav.navbar {
+  background-color: transparent !important;
+}
+
+.navbar .nav-link {
+  color:#03ADFF !important;
+  font-size:25px;
+  font-weight: 700;
+}
+.navbar .nav-link:hover {
+  color:white !important;
+
+}
+
+
+.navbar-expand-lg .navbar-nav .nav-link{
+  padding: 10px;
+  /* margin-left: 10px; */
+  border-radius: 10px;
+  width: auto;
+}
+
+.form-control{
+  font-size: 50px;
+}
+
+.btn-outline-success,.dropdown-item:hover{
+  background-color:#F39D2F !important; 
+  border-color: white;
+}
+
+.btn-outline-success{
+  color: white !important;
+  border-color: white !important;
+  width: 150px !important;
+}
+.navbar-nav .dropdown-menu{
+  margin-left: 8% !important;
+  margin-top: 2% !important;
+  background-color: #F39D2F !important;
+}
+
+.navbar-nav .dropdown-menu:hover{
+  background-color: #e2c093 !important;
+  color: white !important;
+  border-color:transparent;
+
+}
+.dropdown-item{
+  color: #ffffff !important;
+}
+ .nav-link:hover{
+  border: 0px solid transparent !important;
+  background-color: #F39D2F;
+}
+
+.navbar-toggler-icon{
+  background-color: grey !important;
+  width: 80%;
+}
+.navbar-toggler{
+margin-top: -10%;
+}
+
+/* .navbar-toggler.collapsed{
+  background-color: blue;
+  width: 80%;
+} */
+
+.navbar-nav .nav-item {
+  margin-right: 10px !important; 
+  /* padding-right: 10px !important; */
+
+}
+
+
+.me-auto.navbar-nav{
+  background-color: #ffffff;
+}
+
+.navbar-collapse {
+  margin-left: 10% !important;
+}
+
+/* Admin/User Login CSS */
+.PassAndCreateForgot button{
+  padding: 2px;
+  width:150px;
+  background-color:#e2c093;
+  border: 2.2px solid white;
+  /* margin-left: 5px; */
+  /* margin-top: 15px; */
+  border-radius: 5px;
+  color: white;
+}
+.PassAndCreate button:hover{
+  background-color: #F39D2F;
+}
+
+.PassAndCreateForgot button:hover{
+  background-color: #F39D2F;
+}
+.socialIcons  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+.SocIcon {
+  align-items: center;
+  width: 35px  !important;
+  height: 35px ;
+  margin: 5px ;
+  
+}
+  .SocIcon:hover {
+  transform: translateY(-7px);
+  transition: transform 0.3s;
+  }
+
+  div.col-12.Username input{
+    width: 200px;
+    justify-content: center;
+    padding: 2px;
+    border: 2.2px solid #F39D2F;
+    border-radius: 5px;
+  
+  }
+  div.col-12.Username{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+  div.col-12.Username input:hover{
+    border-color: #03ADFF;
+  }
+
+  label{
+    width: 90px;
+  }
+  .PassAndCreate,.PassAndCreateForgot {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .PassAndCreate button{
+    padding: 2px;
+    width:150px;
+    background-color:#03ADFF;
+    border: 2.2px solid white;
+    margin-left: 5px;
+    /* margin-top: 15px; */
+    border-radius: 5px;
+    color: white;
+    /* margin-top: 30%; */
+    
+  }
+  .PassAndCreateForgot button{
+    padding: 2px;
+    width:150px;
+    background-color:#e2c093;
+    border: 2.2px solid white;
+    /* margin-left: 5px; */
+    /* margin-top: 15px; */
+    border-radius: 5px;
+    color: white;
+  }
+  .PassAndCreate button:hover{
+    background-color: #F39D2F;
+  }
+
+  .PassAndCreateForgot button:hover{
+    background-color: #F39D2F;
+  }
+  .socialIcons  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .socSignin{
+    text-align: center;
+    margin-top: 15px;
+    text-size-adjust: 80%;
+    
+  }
+  /*Kusina home Page Carosel   */
+
+ 
+  div.Carding{
+    background-image: url(../Images/restoOpacity.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+#cardRow{
+  text-align: center;
+  margin-left: 8%;
+}
+
+#cardRow2{
+  text-align: center;
+  /* margin-left: 1%; */
+}
+
+  
+
+  div.Caros {
+    background-color: transparent;
+    -webkit-box-shadow: -1px 1px 17px -1px rgba(243, 157, 47, 1);
+    -moz-box-shadow: -1px 1px 17px -1px rgba(243, 157, 47, 1);
+    box-shadow: -1px 1px 17px -1px rgba(243, 157, 47, 1);
+    background-image: url(../Images/backgroundSteak-modified.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .card img{
+    Background: transparent;
+    border: 1px  white !important;
+    
+    
+    
+  }
+
+  .card{
+    background-color:transparent !important;
+
+  }
+
+  .cards:hover{
+    transform: translateY(-20px);
+    transition: transform 0.3s;
+  }
+
+  .center-align {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .center-align .ratio {
+    text-align: center;
+  }
+  /* .card:hover{
+    transform: translateY(-20px);
+    transition: transform 0.3s;
+  } */
+
+  #headerContainer {
+  min-width: 100%;
+  background-color: rgba(226, 226, 226, 0.795); /* comment out after testing */
+
+  }
+
+  #footerContainer {
+    min-width: 100%;
+    background-color: rgba(226, 226, 226, 0.795); /* comment out after testing */
+  
+    }
+
+ #headerLogo {
+  margin-bottom: 1%;
+  margin-top: 1%;
+  ;
+ }
+
+#footerLogo{
+   max-width: 100%;
+}
+
+#navLinks{
+  font-size: 80%;
+  width: 100% !important;
+  background-color: transparent;
+}
+
+.nav-link{
+  block-size: 100%;
+  width: 100% !important;
+  text-align: center;
+  background-color: transparent;
+}
+
+
+#dropDown{
+  background-color: #F39D2F;
+  text-align: center !important;
+  margin-left: 0%;
+  width: 100%;
+}
+
+/* #navbarSupportedContent{
+background-color: red;
+} */
+
+
+/* About us CSS */
+
+.AboutUsBackground{
+  background-image: url(../Images/table.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.Aboutus p{
+  margin-top: -36%;
+  margin-left: 100px;
+  width: 400px;
+}
+
+#carouselExampleCaptions {
+  max-width: 500px; 
+  margin:  auto; 
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto; 
+  border-radius: 15px;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+/* Contact Us CSS */
+
+
+.ContactUsIcon{
+  width: 55px;
+  margin-left: 15px;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+.ContactUsIcon:hover{
+transform: translateY(-20px);
+transition: transform 0.3s;
+}
+
+div.contactUsReachUs {
+  color: #e2c093 !important;
+  text-align: center;
+  font-weight: 900px;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* */
+#registration{
+  background-color: red;
+}
+
+.ContactUs{
+  background-image: url(../Images/contactusbackground.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 8%;
+}
+.form-control,.contactSubmit {
+  background-color: transparent !important;
+  border-color: #e2c093 !important;
+  
+}
+
+.form-label {
+  color: rgb(0, 0, 0) !important; 
+  font-weight: 700;
+  width: 250px;
+}
+
+#exampleForm.ControlInput1{
+  stop-color: antiquewhite;
+}
+
+#exampleForm.ControlTextarea1{
+  text-align: left;
+}
+
+.contactSubmit{
+ margin: 2% 47%;
+};
+
+#formContainer{
+  margin-right: 0% !important;
+}
+
+
+#footerCard{
+
+  min-width: 100%;
+  /* display: table-row; */
+  width: 100%;
+}
+
+
+#contactForm{
+  /* background-color: red; */
+  margin: 0 25%;
+  background-color: #ffffff69;
+  padding: 2%;
+  border-radius: 5%;
+}
+
+#regForm{
+  background-color: rgba(82, 0, 0, 0.144);
+  margin: 2% auto;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 1%;
+  width: 30%;
+
+}
+
+
+#regHead{
+  margin-bottom: 5%;
+  padding-top: 5%;
+}
+
+.formLabel{
+  margin: 1% 25%;
+  width: 50%;
+  fill-opacity: inherit;
+}
+
+.form-control{
+  margin: 0 25%;
+  text-align: left;
+}
+
+.d-grid{
+  width: 50%;
+  margin: 0 25%;
+}
+
+.text-primary.forgot{
+  margin: 0 40%;
+}
+
+.regForm{
+  background-color: rgba(44, 52, 53, 0.103);
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 25px;
+  align-items: center;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.btn-hover:hover {
+  background-color: #F39D2F !important;
+  border-color: #F39D2F !important;
+  color: #fff; /* Text color when hovering */
+  font-weight: 500;
+}
+
+/* Testing */
+/* styles.css */
+
+/* Style for the navigation links */
+
+
