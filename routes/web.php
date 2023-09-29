@@ -41,6 +41,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/', [StoreController::class, 'index'])->name('store.show');
         Route::get('/edit', [StoreController::class, 'edit'])->name('store.edit');
         Route::put('/update', [StoreController::class, 'update'])->name('store.update');
+        
     });
 
     //Product routes

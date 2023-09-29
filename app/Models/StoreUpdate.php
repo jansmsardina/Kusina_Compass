@@ -11,7 +11,7 @@ class StoreUpdate extends Model
 
     protected $table = 'store_updates';
     protected $fillable = [
-        'user_id',
+        'fk_users_id',
         'name',
         'photo',
         'contact',

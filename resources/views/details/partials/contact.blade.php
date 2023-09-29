@@ -15,7 +15,7 @@
 
     <form method="post" action="{{ route('store.update') }}" class="mt-6 space-y-6">
         @csrf
-        @method('put')
+        @method('patch')
 
         <div>
             <x-input-label for="contact" :value="__('contact')" />
