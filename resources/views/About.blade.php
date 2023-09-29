@@ -14,21 +14,21 @@
 
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                            <img src="{{ asset('Images/vy (2).jpg') }}" class="card-img-top" alt="..." />
+                            <img src="{{ asset('public/storage/Images/vy (2).jpg') }}" class="card-img-top" alt="..." />
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>"Vy Cortez"</h5>
                                     <p>Ang Sarap ng Cake ni Cong</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                            <img src="{{ asset('Images/Burger.jpg') }}" class="card-img-top" alt="..." />
+                            <img src="{{ asset('public/storage/Images/Burger.jpg') }}" class="card-img-top" alt="..." />
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>"Angels'Burger"</h5>
                                     <p>Unang Kagat Tinapay Lahat</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                            <img src="{{ asset('Images/Angels.jpg') }}" class="card-img-top" alt="..." />
+                            <img src="{{ asset('public/storage/Images/Angels.jpg') }}" class="card-img-top" alt="..." />
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>"Angel De Leon"</h5>
                                     <p>Ang pizza mo, Pizza ko, Pizza Nating lahat</p>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 Aboutus mb-6 mb-sm-0">
-                <img src="{{ asset('Images/BackMot.png') }}" class="card-img-top" alt="..." />
+                <img src="{{ asset('public/storage/Images/BackMot.png') }}" class="card-img-top" alt="..." />
                 </div>
             </div>
         </div>
