@@ -13,6 +13,7 @@ class StoreUpdate extends Model
     protected $fillable = [
         'user_id',
         'name',
+        'photo',
         'contact',
         'opening_time',
         'closing_time',
