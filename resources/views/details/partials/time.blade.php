@@ -7,26 +7,32 @@
 
 
 
-    <form method="post" action="{{ route('hours.update') }}" class="mt-6 space-y-6">
+
+    <form id="send-verification" method="post" action="{{ route('verification.send') }}">
         @csrf
-        @method('patch')
+    </form>
+
+    <form method="post" action="{{ route('store.update') }}" class="mt-6 space-y-6">
+        @csrf
+        @method('put')
 
         <div>
-            <x-input-label for="opening_time" :value="__('Opening Time')" />
-            <x-text-input id="opening_time" name="opening_time" type="time" class="mt-1 block w-full" :value="old('opening_time', $user->opening_time)" required autofocus />
+            <x-input-label for="contact" :value="__('Opening Time')" />
+            <x-text-input id="contact" name="contact" type="time" class="mt-1 block w-full" :value="old('opening_time', $storeUpdates->opening_time)" required autofocus autocomplete="contact" />
             <x-input-error class="mt-2" :messages="$errors->get('opening_time')" />
         </div>
         
         <div>
-            <x-input-label for="closing_time" :value="__('Closing Time')" />
-            <x-text-input id="closing_time" name="closing_time" type="time" class="mt-1 block w-full" :value="old('closing_time', $user->closing_time)" required />
+            <x-input-label for="contact" :value="__('Closing Time')" />
+            <x-text-input id="contact" name="contact" type="time" class="mt-1 block w-full" :value="old('closing_time', $storeUpdates->closing_time)" required autofocus autocomplete="contact" />
             <x-input-error class="mt-2" :messages="$errors->get('closing_time')" />
         </div>
+        
 
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 
-            @if (session('status') === 'hours-updated')
+            @if (session('status') === 'store_hours-updated')
                 <p
                     x-data="{ show: true }"
                     x-show="show"

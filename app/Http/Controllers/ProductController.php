@@ -24,7 +24,9 @@ class ProductController extends Controller
     public function store(Request $request)
 {
     $data = $request->validate([
+        'user_id' => 'required',
         'name' => 'required',
+
         'price' => 'required|integer',
         'description' => 'required',
         'name' => 'required',
@@ -40,7 +42,7 @@ class ProductController extends Controller
         $image->storeAs('public/Uploads/ProductUploads', $filename);
     } else {
         $filename = ''; 
-    }
+
 
    $data = [
     'name' => $request->input('name'),

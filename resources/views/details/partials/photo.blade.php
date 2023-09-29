@@ -1,12 +1,15 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Contact Information') }}
+            {{ __('Store Photo') }}
         </h2>
 
         <p class="mt-1 text-sm text-gray-600">
-            {{ __("Update your contact number.") }}
+            {{ __("Update your store photo") }}
         </p>
+        <div>
+        <img src="{{ asset('public/storage/Uploads/ProfileUploads/' . $storeUpdates->photo) }}" alt="Product Image" class="img-thumbnail" style="max-width: 100px;">
+        </div>
     </header>
 
     <form id="send-verification" method="post" action="{{ route('verification.send') }}">
@@ -17,10 +20,12 @@
         @csrf
         @method('put')
 
+
+        
         <div>
-            <x-input-label for="contact" :value="__('contact')" />
-            <x-text-input id="contact" name="contact" type="text" class="mt-1 block w-full" :value="old('contact', $storeUpdates->contact)" required autofocus autocomplete="contact" />
-            <x-input-error class="mt-2" :messages="$errors->get('contact')" />
+            
+            <x-text-input id="photo" name="photo" type="file" class="mt-1 block w-full" :value="old('photo', $storeUpdates->photo)" required autofocus autocomplete="photo" />
+            <x-input-error class="mt-2" :messages="$errors->get('photo')" />
         </div>
         
         
@@ -28,7 +33,7 @@
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 
-            @if (session('status') === 'contact_number-updated')
+            @if (session('status') === 'photo-updated')
                 <p
                     x-data="{ show: true }"
                     x-show="show"
