@@ -39,6 +39,7 @@ class ProductController extends Controller
         $filename = time() . '.' . $image->getClientOriginalExtension();
         $image->storeAs('public/Uploads/ProductUploads', $filename);
     } else {
+
         $filename = ''; // Set a default value for the image if it's not provided.
     }
 
