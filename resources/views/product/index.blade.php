@@ -43,7 +43,9 @@
                     <td style="border: 1px solid #000;">{{ $product->description }}</td>
                     
                     <td style="border: 1px solid #000;">
-                        <img src="{{ asset('public/storage/Uploads/ProductUploads/' . $product->image) }}" alt="Product Image" class="img-thumbnail" style="max-width: 100px;">
+
+                         <img src="{{ asset('public/storage/Uploads/ProductUploads/' . $product->image) }}" alt="Product Image" class="img-thumbnail" style="max-width: 100px;">
+
                 
                         
                     <td style="border: 1px solid #000;">

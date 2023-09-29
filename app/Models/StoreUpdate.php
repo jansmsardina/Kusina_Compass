@@ -10,9 +10,11 @@ class StoreUpdate extends Model
     use HasFactory;
 
     protected $fillable = [
+        'name',
         'contact',
         'opening_time',
         'closing_time',
         'address',      
     ];
 }
+//push partial
