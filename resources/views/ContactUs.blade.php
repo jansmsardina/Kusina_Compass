@@ -25,10 +25,10 @@
     </div>
 
     <div class="col-12 socialIcons" id="Social-Media-Container">
-        <a href="https://facebook.com"><img class="ContactUsIcon" src="{{ asset('/Images/fb.png') }}" alt="Facebook" /></a>
-        <a href="https://www.instagram.com/"><img class="ContactUsIcon" src="{{ asset('/Images/insta.png') }}" alt="Instagram" /></a>
-        <a href="https://www.tiktok.com/en/"><img class="ContactUsIcon" src="{{ asset('/Images/tiktok.png') }}" alt="TikTok" /></a>
-        <a href="https://www.linkedin.com/feed/"><img class="ContactUsIcon" src="{{ asset('/Images/Linkedin.png') }}" alt="LinkedIn" /></a>
+        <a href="https://facebook.com"><img class="ContactUsIcon" src="{{asset('public/storage/Images/fb.png') }}" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/"><img class="ContactUsIcon" src="{{asset('public/storage/Images/insta.png') }}" alt="Instagram" /></a>
+        <a href="https://www.tiktok.com/en/"><img class="ContactUsIcon" src="{{ asset('public/storage/Images/tiktok.png') }}" alt="TikTok" /></a>
+        <a href="https://www.linkedin.com/feed/"><img class="ContactUsIcon" src="{{ asset('public/storage/Images/Linkedin.png') }}" alt="LinkedIn" /></a>
     </div>
 
 </div>

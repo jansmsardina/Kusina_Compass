@@ -9,7 +9,7 @@
                     <div class="row">
                         <div class="col-12 col-md">
                             <div class="container-fluid">
-                            <img class="img-fluid" src="{{ asset('Images/Logo.png') }}" alt="Logo"id='footerLogo' />
+                            <img class="img-fluid" src="{{ asset('public/storage/Images/Logo.png') }}" alt="Logo"id='footerLogo' />
                             </div>
                         </div>
                         <div class="col-3 col-sm">

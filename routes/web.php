@@ -46,10 +46,12 @@ Route::middleware('auth')->group(function () {
     //Product routes
     Route::post('/products', [ProductController::class, 'store'])->name('products.store');
     Route::get('/product', [ProductController::class, 'index'])->name('product.index');
+    Route::get('/csv', [ProductController::class, 'csv'])->name('csv');
     Route::get('/products', [ProductController::class, 'store'])->name('product.store');
     Route::get('/products/create', [ProductController::class, 'create'])->name('product.create');
     Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('product.edit');
     Route::get('/products/destroy/{id}', [ProductController::class, 'destroy'])->name('product.destroy');
+    
 
 
 
