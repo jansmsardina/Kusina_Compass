@@ -5,7 +5,7 @@
         </h2>
 
         <p class="mt-1 text-sm text-gray-600">
-            {{ __("Make sure to input your active contact number") }}
+            {{ __("Update your contact number.") }}
         </p>
     </header>
 
@@ -13,15 +13,16 @@
         @csrf
     </form>
 
-    <form method="post" action="{{ route('hours.update') }}" class="mt-6 space-y-6">
+    <form method="post" action="{{ route('store.update') }}" class="mt-6 space-y-6">
         @csrf
-        @method('patch')
+        @method('put')
 
         <div>
-            <x-input-label for="contact_number" :value="__('Opening Time')" />
-            <x-text-input id="contact_number" name="opening_time" type="int" class="mt-1 block w-full" :value="old('contact_number', $user->contact_number)" required autofocus />
-            <x-input-error class="mt-2" :messages="$errors->get('contact_number')" />
+            <x-input-label for="contact" :value="__('contact')" />
+            <x-text-input id="contact" name="contact" type="text" class="mt-1 block w-full" :value="old('contact', $storeUpdates->contact)" required autofocus autocomplete="contact" />
+            <x-input-error class="mt-2" :messages="$errors->get('contact')" />
         </div>
+        
         
 
         <div class="flex items-center gap-4">

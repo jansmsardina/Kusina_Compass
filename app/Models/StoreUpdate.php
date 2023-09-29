@@ -9,7 +9,9 @@ class StoreUpdate extends Model
 {
     use HasFactory;
 
+    protected $table = 'store_updates';
     protected $fillable = [
+        'user_id',
         'name',
         'contact',
         'opening_time',
