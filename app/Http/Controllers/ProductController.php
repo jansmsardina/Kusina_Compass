@@ -26,22 +26,23 @@ class ProductController extends Controller
     $data = $request->validate([
         'user_id' => 'required',
         'name' => 'required',
-        'contact' => 'required',
-        'opening_time' => 'required | time',
-        'closing_time' => 'required| time',
-        'address' => 'required',
-        'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', 
+
+        'price' => 'required|integer',
+        'description' => 'required',
+        'name' => 'required',
+        'price' => 'required|integer',
+        'description' => 'required',
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', 
         
     ]);
     
-    if ($request->hasFile('photo')) {
-        $photo = $request->file('photo');
-        $filename = time() . '.' . $photo->getClientOriginalExtension();
-        $photo->storeAs('public/Uploads/ProfileUploads', $filename);
+    if ($request->hasFile('image')) {
+        $image = $request->file('image');
+        $filename = time() . '.' . $image->getClientOriginalExtension();
+        $image->storeAs('public/Uploads/ProductUploads', $filename);
     } else {
+        $filename = ''; 
 
-        $filename = ''; // Set a default value for the image if it's not provided.
-    }
 
    $data = [
     'name' => $request->input('name'),
@@ -97,6 +98,30 @@ public function destroy ($id){
         $product->delete();
     return redirect(route('product.index')) ->with('success','Product Deleted Succesfully');
     
+}
+
+public function csv()
+{
+    header('Content-Disposition: attachment; filename=data.csv');
+
+    $products = Product::all()->toArray();
+    $columns = ['id', 'created_by','name', 'price', 'description','image', 'created_at','updated_at']; // Define column names
+
+    $filename = 'products.csv';
+    $f = fopen('php://output', 'w');
+
+    if ($f === false) {
+        die('error opening the file ' . $filename);
+    }
+
+    // Write the column headers to the CSV file
+    fputcsv($f, $columns);
+
+    foreach ($products as $product) {
+        fputcsv($f, $product);
+    }
+
+    fclose($f);
 }
 
 }

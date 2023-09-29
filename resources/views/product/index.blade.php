@@ -17,21 +17,26 @@
         </div>
         @endif
 
-        <div class="mb-3">
-            <a class="btn btn-primary" href="{{ route('product.create') }}">Add a Product</a>
-        </div>
+ 
+       
+           
+        
         <div class="container mt-5">
+             <a class="btn btn-primary" href="{{ route('product.create') }}">Add a Product</a>
+           <a class="btn btn-primary" href="{{ route('csv') }}" style="background-color: #63D792; border-color: #63D792 !important;">Download CSV File</a>
+
         <table id="myTable" style="border: 1px solid #000;">
     
             <thead>
                 <tr>
-                    <th style="border: 0.5px solid #000; background-color: rgba(0, 0, 0, 0.1);">ID</th>
-                    <th style="border: 0.5px solid #000; background-color: rgba(0, 0, 0, 0.1);">Name</th>
-                    <th style="border: 1px solid #000;">Price</th>
-                    <th style="border: 1px solid #000;">Description</th>
-                    <th style="border: 1px solid #000;">Image</th>
-                    <th style="border: 1px solid #000;">Edit</th>
-                    <th style="border: 1px solid #000;">Delete</th>
+
+                  <th style="border: 0.5px solid #000; background-color: #F39D2F;">ID</th>
+                    <th style="border: 0.5px solid #000; background-color: #F39D2F;">Name</th>
+                    <th style="border: 1px solid #000; background-color: #F39D2F;">Price</th>
+                    <th style="border: 1px solid #000; background-color: #F39D2F;">Description</th>
+                    <th style="border: 1px solid #000; background-color: #F39D2F;"">Image</th>
+                    <th style="border: 1px solid #000; background-color: #F39D2F;"">Edit</th>
+                    <th style="border: 1px solid #000; background-color: #F39D2F;"">Delete</th>
                 </tr>
             </thead>
                             <tbody>
@@ -44,7 +49,7 @@
                     
                     <td style="border: 1px solid #000;">
 
-                         <img src="{{ asset('public/storage/Uploads/ProductUploads/' . $product->image) }}" alt="Product Image" class="img-thumbnail" style="max-width: 100px;">
+                        <img src="{{ asset('public/storage/Uploads/ProductUploads/' . $product->image) }}" alt="Product Image" class="img-thumbnail" style="max-width: 100px;">
 
                 
                         
@@ -85,5 +90,18 @@
    <script> 
         let table = new DataTable('#myTable');
     </script>
+
+
+  <style>
+    select {
+       background-positon: left 3rem center no-repeat !important;
+        /* Replace 'your_image_url' with the actual image URL */
+    }
+
+    .dataTables_wrapper .dataTables_length select {
+        padding-right: 30px !important;
+    }
+</style>
+
     </body>
 </x-app-layout>
