@@ -24,7 +24,7 @@ class Product extends Model
             'price',
             'description',
             'image',
-            'image_name',
+            'created_by',
 
     ];
     
