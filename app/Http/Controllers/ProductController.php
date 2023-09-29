@@ -24,20 +24,20 @@ class ProductController extends Controller
     public function store(Request $request)
 {
     $data = $request->validate([
+        'user_id' => 'required',
         'name' => 'required',
-        'price' => 'required|integer',
-        'description' => 'required',
-        'name' => 'required',
-        'price' => 'required|integer',
-        'description' => 'required',
-        'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', 
+        'contact' => 'required',
+        'opening_time' => 'required | time',
+        'closing_time' => 'required| time',
+        'address' => 'required',
+        'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', 
         
     ]);
     
-    if ($request->hasFile('image')) {
-        $image = $request->file('image');
-        $filename = time() . '.' . $image->getClientOriginalExtension();
-        $image->storeAs('public/Uploads/ProductUploads', $filename);
+    if ($request->hasFile('photo')) {
+        $photo = $request->file('photo');
+        $filename = time() . '.' . $photo->getClientOriginalExtension();
+        $photo->storeAs('public/Uploads/ProfileUploads', $filename);
     } else {
 
         $filename = ''; // Set a default value for the image if it's not provided.
